@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 - Added `apps/` directory containing shared library for the backend services.
 
-## [v0.0.1] - 2025-month-day
+## [v0.0.1] - 2025-10-11
 
 ### Added
 
