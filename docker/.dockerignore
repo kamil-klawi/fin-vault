@@ -1,0 +1,57 @@
+# These files are created by OS or editors
+**/.DS_Store
+**/Thumbs.db
+**/*.log
+**/*.tmp
+**/*.swp
+**/*.swo
+**/*.bak
+**/node_modules
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Ignore git metadata and rules
+.git
+.gitattributes
+.gitmodules
+.gitallowed
+.gitignore
+
+# Ignore ASP.NET Core build and cache folders
+**/bin
+**/obj
+**/*.user
+**/*.suo
+**/*.pdb
+**/*.db
+**/TestResults
+**/*.vspscc
+**/*.vssscc
+**/.vs/
+**/*.nupkg
+**/packages/
+**/.vscode/
+**/Properties/launchSettings.json
+
+# Ignore Next.js build output and caches
+**/.next
+**/.turbo
+**/.vercel
+**/.cache
+**/out
+**/dist
+**/build
+**/yarn.lock
+**/package-lock.json
+**/pnpm-lock.yaml
+
+# Ignore local database files, volumes and manual dumps
+**/pg_data/
+**/postgres_data/
+**/*.sql
+**/*.dump
+
+# Ignore override files or backup versions of Dockerfiles
+docker-compose.override.yml
+Dockerfile.*.bak
