@@ -1,0 +1,92 @@
+# GLOBAL IGNORE
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+*~
+~$*
+*.swo
+*.swn
+backup/
+
+## IDEs
+.vs/
+.idea/
+.vscode/
+
+# MARKDOWN / DOCUMENTATION
+
+*.md.html
+_site/
+*.md.pdf
+*.md.docx
+
+# BASH / SHELL
+
+*.sh~
+*.bash_history
+*.bash_profile
+*.bashrc
+*.zshrc
+.profile
+.envrc
+
+# .NET / ASP.NET Core / .NET 8
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+artifacts/
+project.lock.json
+project.fragment.lock.json
+*.pidb
+*.svclog
+
+## Solution folder
+*.sln.iml
+
+## LaunchSettings
+**/Properties/launchSettings.json
+
+## Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+## Publish Output
+publish/
+*.pubxml
+*.publishproj
+*.azurePubxml
+*.pfx
+
+## NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+## Rider / Resharper / JetBrains
+_ReSharper*/
+*.DotSettings.user
+
+## Other IDEs
+*.tmproj
+*.code-workspace

@@ -1,0 +1,35 @@
+* text=auto
+
+*.bat text eol=crlf
+*.cs text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.pdf binary
+
+*.md diff=markdown
+
+.gitallowed export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitmodules export-ignore
+.github/ export-ignore
+
+.idea/ export-ignore
+.vscode/ export-ignore
+.devcontainer/ export-ignore
+
+docs/*.md export-ignore
+docs/*.mdx export-ignore
+*.md export-ignore
+*.mdx export-ignore
+
+.env export-ignore
+.env.example export-ignore
+.env.development export-ignore
+.env.production export-ignore
+.env.test export-ignore
