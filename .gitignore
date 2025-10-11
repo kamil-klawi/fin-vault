@@ -15,6 +15,9 @@ Icon?
 *.swo
 *.swn
 backup/
+.env
+.env.development
+.env.test
 
 ## IDEs
 .vs/
