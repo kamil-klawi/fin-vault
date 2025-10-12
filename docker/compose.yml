@@ -1,4 +1,28 @@
 services:
+  identity-service:
+    build:
+      context: ../
+      dockerfile: docker/identity-service/Dockerfile
+    container_name: fin-vault-identity-service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+    networks:
+      - fin-vault-backend-network
+
+  api-gateway:
+    build:
+      context: ../
+      dockerfile: docker/api-gateway/Dockerfile
+    container_name: fin-vault-api-gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - identity-service
+    networks:
+      - fin-vault-backend-network
+
   postgres:
     image: postgres:17
     container_name: fin-vault-db
@@ -11,11 +35,28 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ../scripts/init-multi-dbs.sh:/docker-entrypoint-initdb.d/init-multi-dbs.sh:ro
+    networks:
+      - fin-vault-backend-network
+
+  rabbitmq:
+    image: rabbitmq:3.12-management-alpine
+    container_name: fin-vault-rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD}
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - fin-vault-backend-network
 
 volumes:
   postgres_data:
+  rabbitmq_data:
 
 networks:
   fin-vault-backend-network:
