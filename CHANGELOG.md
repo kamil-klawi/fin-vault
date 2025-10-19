@@ -7,9 +7,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 ## [Unreleased]
 
 - Added `IdentityService` directory containing authentication and user service logic.
+
+## [v0.2.0] - 2025-10-19
+
+### Added
+
 - Added `ApiGateway` directory containing API gateway implementation.
 
+### Changed
+
+- Refactored `Makefile` to improve maintainability.
+
 ## [v0.1.0] - 2025-10-19
+
+### Added
 
 - Added `SharedLibrary/` directory containing shared library for the backend services.
 - Added `Common/` module containing shared logic, including:
@@ -24,6 +35,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
   2. `User/` directory with user-related contracts
 
 ## [v0.0.2] - 2025-10-12
+
+### Added
 
 - Added configurations for `rabbitmq client`, `api-gateway` and `identity-service` in the `docker/` directory.
 - Added dockerfiles for the `api-gateway` and `identity-service`.
