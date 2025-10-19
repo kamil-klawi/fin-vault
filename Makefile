@@ -1,8 +1,11 @@
+SCRIPT_DIR := ../scripts
+DOCKER_DIR := docker
+
 start:
-	cd docker && bash ../scripts/start.sh
+	cd $(DOCKER_DIR) && bash $(SCRIPT_DIR)/start.sh
 
 cleanup:
-	cd docker && bash ../scripts/cleanup.sh
+	cd $(DOCKER_DIR) && bash $(SCRIPT_DIR)/cleanup.sh
 
 stop:
-	cd docker && bash ../scripts/stop.sh
+	cd $(DOCKER_DIR) && bash $(SCRIPT_DIR)/stop.sh
