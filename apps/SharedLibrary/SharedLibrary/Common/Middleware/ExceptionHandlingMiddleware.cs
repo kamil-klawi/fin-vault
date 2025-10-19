@@ -3,6 +3,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using SharedLibrary.Common.Exceptions;
+using SharedLibrary.Contracts.Common;
 using TimeoutException = System.TimeoutException;
 
 namespace SharedLibrary.Common.Middleware
@@ -56,9 +57,11 @@ namespace SharedLibrary.Common.Middleware
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)statusCode;
 
-            var response = new
+            ErrorResponse response = new ErrorResponse
             {
-                error = overrideMessage ?? exception.Message
+                Message = overrideMessage ?? exception.Message,
+                StatusCode = exception.GetType().Name,
+                Timestamp = DateTime.UtcNow
             };
 
             var options = new JsonSerializerOptions
