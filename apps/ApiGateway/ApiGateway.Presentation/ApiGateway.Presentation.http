@@ -1,0 +1,8 @@
+@HOST = http://localhost
+@PORT = 5000
+@ApiGateway_HostAddress = {{HOST}}:{{PORT}}
+
+GET {{ApiGateway_HostAddress}}/
+Accept: application/json
+
+###
