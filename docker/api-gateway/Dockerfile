@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/dotnet/sdk:${DOTNET_VERSION} AS build
 WORKDIR /src
 
 COPY apps/ApiGateway/ApiGateway.sln ./
-COPY apps/ApiGateway/ApiGateway.Presentation/ApiGateway.Presentation.csproj ./src/ApiGateway.Presentation/
+COPY apps/ApiGateway/ApiGateway.Presentation/ApiGateway.Presentation.csproj ./ApiGateway.Presentation/
 
 RUN dotnet restore ApiGateway.sln
 
