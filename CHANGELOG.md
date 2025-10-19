@@ -6,7 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ## [Unreleased]
 
-- Added `apps/` directory containing shared library for the backend services.
+- Added `IdentityService` directory containing authentication and user service logic.
+- Added `ApiGateway` directory containing API gateway implementation.
+
+## [v0.1.0] - 2025-10-19
+
+- Added `SharedLibrary/` directory containing shared library for the backend services.
+- Added `Common/` module containing shared logic, including:
+  1. `Enums/` directory for reusable enumerations
+  2. `Exceptions/` directory for custom exception classes
+  3. `Extensions/` directory for helper and utility functions
+  4. `Middleware/` directory for shared middleware components
+  5. `Security/` directory for authentication and security logic
+  6. `ValueObjects/` directory for domain-driven value objects
+- Added `Contracts/` module containing reusable interfaces for:
+  1. `Common/` directory with shared interfaces
+  2. `User/` directory with user-related contracts
 
 ## [v0.0.2] - 2025-10-12
 
