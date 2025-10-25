@@ -6,11 +6,13 @@ namespace IdentityService.Domain.Entities
     public class User
     {
         public Guid Id { get; }
-        public Email Email { get; } = null!;
+        public Email Email { get; private set; } = null!;
         public PasswordHash PasswordHash { get; private set; } = null!;
         public PersonalData PersonalData { get; private set; } = null!;
         public DateTime UpdatedAt { get; private set; }
         public DateTime CreatedAt { get; }
+        public string? PasswordResetToken { get; private set; }
+        public DateTime? PasswordResetTokenExpires { get; private set; }
 
         private User() {}
 
@@ -48,6 +50,22 @@ namespace IdentityService.Domain.Entities
 
             PasswordHash = new PasswordHash(password);
             UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void ChangePassword(string password)
+        {
+            PasswordHash = new PasswordHash(password);
+        }
+
+        public void SetPasswordResetToken(string? token, DateTime? expires)
+        {
+            PasswordResetToken = token;
+            PasswordResetTokenExpires = expires;
+        }
+
+        public void ChangeEmail(string email)
+        {
+            Email = new Email(email);
         }
     }
 }
