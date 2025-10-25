@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
-## [Unreleased]
+## [v0.3.0] - 2025-10-25
 
 - Added `IdentityService` directory containing authentication and user service logic.
+
+### Changed
+
+- Refactored `PhoneNumber` value object constructor from private to public.
 
 ## [v0.2.0] - 2025-10-19
 
