@@ -8,7 +8,7 @@ namespace SharedLibrary.Common.ValueObjects
 
         private PhoneNumber() {}
 
-        private PhoneNumber(string value)
+        public PhoneNumber(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("Phone number cannot be null or whitespace!", nameof(value));
