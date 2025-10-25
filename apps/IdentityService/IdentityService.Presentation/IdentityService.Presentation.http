@@ -1,0 +1,11 @@
+@HOST = http://localhost
+@PORT = 5001
+@IdentityService_HostAddress = {{HOST}}:{{PORT}}
+
+POST {{IdentityService_HostAddress}}/auth/login
+Accept: application/json
+
+###
+
+GET {{IdentityService_HostAddress}}/users/me
+Accept: application/json
