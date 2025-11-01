@@ -4,7 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
+## [Unreleased]
+
+### Added
+
+- Added `AccountService` directory containing logic for managing bank accounts.
+
+## [v0.3.1] - 2025-11-01
+
+### Added
+
+- Added `DefaultConnection` for connecting to the database.
+
+### Changed
+
+- Improved readability of identity service `Dockerfile`.
+
 ## [v0.3.0] - 2025-10-25
+
+### Added
 
 - Added `IdentityService` directory containing authentication and user service logic.
 
